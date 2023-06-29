@@ -91,7 +91,7 @@ const HomePage = () => {
     };
     console.log(signUpData);
     const res=await axios.post("https://touristbackend-z6a1.onrender.com/signUpData", signUpData);
-    if(res.data=="userName already exist"){
+    if(res.data==="userName already exist"){
       window.alert(res.data);
       window.location.reload(false);
     }
