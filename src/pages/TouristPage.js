@@ -16,7 +16,7 @@ const TouristPage = () => {
   const currUserName = localStorage.getItem("userName") || '/0';
   // console.log(currLoggedUser)
   useEffect(() => {
-    axios.get("http://localhost:4000/touristPage", {
+    axios.get("https://touristbackend-z6a1.onrender.com/touristPage", {
       params: { currUserName: currUserName },
     }).then((response) => {
       if(response.data!=="Logged out"){

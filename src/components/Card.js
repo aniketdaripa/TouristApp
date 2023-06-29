@@ -9,13 +9,13 @@ export default function Card(props) {
 
   const requestHandler = async () => {
     window.location.reload(false);
-    await axios.get("http://localhost:4000/request", {
+    await axios.get("https://touristbackend-z6a1.onrender.com/request", {
       params: { currUserName: props.currGuideUsername },
     });
   };
   useEffect(() => {
     axios
-      .get("http://localhost:4000/getImageData", {
+      .get("https://touristbackend-z6a1.onrender.com/getImageData", {
         params: { userName: props.currGuideUsername },
       })
       .then((response) => {
@@ -25,7 +25,7 @@ export default function Card(props) {
   ///////////////
   useEffect(() => {
     axios
-      .get("http://localhost:4000/requestCheckData", {
+      .get("https://touristbackend-z6a1.onrender.com/requestCheckData", {
         params: { currUserName: props.currGuideUsername },
       })
       .then((response) => {
@@ -41,7 +41,7 @@ export default function Card(props) {
   return (
     <div id={classes["login-container"]}>
       <div >
-        <img src={`http://localhost:4000/${imageUrl}`} alt="img"  style={{height:"80px", width:"80px",borderRadius:"50%"}}/>
+        <img src={`https://touristbackend-z6a1.onrender.com/${imageUrl}`} alt="img"  style={{height:"80px", width:"80px",borderRadius:"50%"}}/>
       </div>
       <h1>{`${props.firstName} ${props.lastName}`}</h1>
       <div className={classes["description"]}>

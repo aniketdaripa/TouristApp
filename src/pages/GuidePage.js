@@ -18,13 +18,13 @@ const GuidePage = () => {
   const handleSubmit = async () => {
     const formData = new FormData();
     formData.append("image", image);
-    await axios.post("http://localhost:4000/uploadImage", formData, {
+    await axios.post("https://touristbackend-z6a1.onrender.com/uploadImage", formData, {
       params: { userName: currUserName },
     });
   };
   useEffect(() => {
     axios
-      .get("http://localhost:4000/getImageData", {
+      .get("https://touristbackend-z6a1.onrender.com/getImageData", {
         params: { userName: currUserName },
       })
       .then((response) => {
@@ -34,7 +34,7 @@ const GuidePage = () => {
   ///////////////
   useEffect(() => {
     axios
-      .get("http://localhost:4000/getGuideFullData", {
+      .get("https://touristbackend-z6a1.onrender.com/getGuideFullData", {
         params: { currUserName: currUserName },
       })
       .then((response) => {
@@ -44,12 +44,12 @@ const GuidePage = () => {
   }, []);
 
   const reqChangeHandler = () => {
-    axios.get("http://localhost:4000/reject", {
+    axios.get("https://touristbackend-z6a1.onrender.com/reject", {
       params: { currUserName: currUserName },
     });
   };
   const availabilityChangeHandler = () => {
-    axios.get("http://localhost:4000/availability", {
+    axios.get("https://touristbackend-z6a1.onrender.com/availability", {
       params: { currUserName: currUserName },
     });
     window.location.reload(false);
@@ -65,7 +65,7 @@ const GuidePage = () => {
           <div className={classes["profile-header"]}>
               {imageUrl && (
                 <img
-                  src={`http://localhost:4000/${imageUrl}`}
+                  src={`https://touristbackend-z6a1.onrender.com/${imageUrl}`}
                   alt="profile-user"
                   width="100px"
                   height="100px"

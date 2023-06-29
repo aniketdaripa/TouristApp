@@ -40,7 +40,7 @@ const HomePage = () => {
     // console.log(loginData);
     const res = await axios({
       method: "post",
-      url: "http://localhost:4000/loginData",
+      url: "https://touristbackend-z6a1.onrender.com/loginData",
       data: {
         userName: loginuserName,
         passWord: loginpassWord,
@@ -90,7 +90,7 @@ const HomePage = () => {
       userType: userType,
     };
     console.log(signUpData);
-    const res=await axios.post("http://localhost:4000/signUpData", signUpData);
+    const res=await axios.post("https://touristbackend-z6a1.onrender.com/signUpData", signUpData);
     if(res.data=="userName already exist"){
       window.alert(res.data);
       window.location.reload(false);

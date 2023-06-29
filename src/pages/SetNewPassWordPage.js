@@ -13,7 +13,7 @@ const SetNewPassWordPage = () => {
     const saveHandler=async()=>{
         const res =await axios({
             method: "post",
-            url: "http://localhost:4000/newPassWordData",
+            url: "https://touristbackend-z6a1.onrender.com/newPassWordData",
             data: {
               userName: userName,
               passWord: newPassWord

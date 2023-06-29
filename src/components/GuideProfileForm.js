@@ -52,7 +52,7 @@ const GuideProfileForm = (props) => {
   const saveHandler = async () => {
     // console.log(guideData)
     window.location.reload(false);
-    await axios.post("http://localhost:4000/guideFullData", guideData,{
+    await axios.post("https://touristbackend-z6a1.onrender.com/guideFullData", guideData,{
       params: { currUserName: props.currGuideData[0].userName, },
     });
     // window.location.reload(false);

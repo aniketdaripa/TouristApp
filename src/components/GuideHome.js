@@ -7,7 +7,7 @@ export default function GuideHome() {
   const [requested, setRequested] = useState(false);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/requestCheckData", {
+      .get("https://touristbackend-z6a1.onrender.com/requestCheckData", {
         params: { currUserName: currUserName },
       })
       .then((response) => {
@@ -22,14 +22,14 @@ export default function GuideHome() {
   }, []);
 
   const acceptHandler = () => {
-    axios.get("http://localhost:4000/accept", {
+    axios.get("https://touristbackend-z6a1.onrender.com/accept", {
       params: { currUserName: currUserName },
     });
     window.location.reload(false);
 
   };
   const rejectHandler = () => {
-    axios.get("http://localhost:4000/reject", {
+    axios.get("https://touristbackend-z6a1.onrender.com/reject", {
       params: { currUserName: currUserName },
     });
     window.location.reload(false);
