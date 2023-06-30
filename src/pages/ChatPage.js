@@ -7,8 +7,8 @@ const socket = io.connect("https://touristchat.onrender.com");
 
 function ChatPage() {
   const roomId=localStorage.getItem('userName');
-  const [username, setUsername] = useState("");
-  const [room, setRoom] = useState(roomId);
+  const [username, setUsername] = useState("x");
+  const [room, setRoom] = useState("x");
   const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
@@ -22,13 +22,13 @@ function ChatPage() {
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Join A Chat</h3>
-          <input
+          {/* <input
             type="text"
             placeholder="Your Name..."
             onChange={(event) => {
               setUsername(event.target.value);
             }}
-          />
+          /> */}
           <button onClick={joinRoom}>Join A Room</button>
         </div>
       ) : (
