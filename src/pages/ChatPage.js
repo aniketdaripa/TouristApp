@@ -7,7 +7,7 @@ const socket = io.connect("https://touristchat.onrender.com");
 
 function ChatPage() {
   const roomId=localStorage.getItem('userName');
-  const [username, setUsername] = useState("x");
+  const [username, setUsername] = useState(roomId);
   const [room, setRoom] = useState("x");
   const [showChat, setShowChat] = useState(false);
 
